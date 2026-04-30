@@ -2,7 +2,7 @@ import TileCart from '@/components/TileCart'
 import React from 'react'
 
 const AllTiles = async() => {
-    const res = await fetch("https://tiles-gallery-seven.vercel.app/data.json")
+    const res = await fetch("https://tiles-gallery-hda2.vercel.app/data.json")
     const tiles = await res.json()
   return (
     <div>

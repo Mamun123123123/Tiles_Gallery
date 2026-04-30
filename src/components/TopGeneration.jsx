@@ -2,7 +2,7 @@ import TileCart from "./TileCart"
 
 
 const TopGeneration = async() => {
-    const res = await fetch("https://tiles-gallery-seven.vercel.app/data.json")
+    const res = await fetch("https://tiles-gallery-hda2.vercel.app/data.json")
     const tiles = await res.json()
     // console.log(tiles);
     const toptiles = tiles.slice(0,4)
