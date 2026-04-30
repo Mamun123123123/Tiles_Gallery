@@ -17,7 +17,7 @@ const TileCart = ({tile}) => {
         <h2 className='font-medium'>{tile.title}</h2>
       </div>
    
-     <Link href={`/all-photos/${tile.id}`}>
+     <Link href={`/all-tiles/${tile.id}`}>
      <button variant='outline' className=' border  rounded-3xl p-1 w-full'>View</button>
      </Link>
     </Card>
