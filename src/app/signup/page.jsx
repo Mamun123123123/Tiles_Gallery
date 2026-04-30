@@ -1,4 +1,5 @@
 "use client";
+
 import { authClient } from "@/lib/auth-client";
 import { Check } from "@gravity-ui/icons";
 import {
@@ -13,9 +14,12 @@ import {
 } from "@heroui/react";
 import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
+import Link from "next/link";
+import { toast } from "react-toastify";
 
 export default function SignUpPage() {
-  const router = useRouter()
+  const router = useRouter();
+
   const {
     register,
     handleSubmit,
@@ -23,33 +27,46 @@ export default function SignUpPage() {
   } = useForm();
 
   const onSubmit = async (data) => {
-    console.log("data" ,data);
     const { name, email, password, image } = data;
-   const { data: res, error } = await authClient.signUp.email({
-    name: name, // required
-    email: email, // required
-    password: password, // required
-    image: image,
-    callbackURL: "/",
-});
-console.log(res,error);
-if(error){
-  alert(error.message)
-}
-if(res){
-  alert("Sign up Successfully")
-  router.push('/signin')
-}
+
+    const { data: res, error } = await authClient.signUp.email({
+      name,
+      email,
+      password,
+      image,
+      callbackURL: "/",
+    });
+
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
+
+    if (res) {
+      toast.success("Registration Successful ");
+      router.push("/signin");
+    }
+  };
+
+
+  const handleGoogleLogin = async () => {
+    await authClient.signIn.social({
+      provider: "google",
+      callbackURL: "/",
+    });
   };
 
   return (
-    <Card className="border mx-auto w-125 py-10 mt-5">
-      <h1 className="text-center text-2xl font-bold">Sign Up</h1>
+    <Card className="border mx-auto w-full max-w-md py-10 mt-10 px-6 shadow-lg">
+      <h1 className="text-center text-2xl font-bold mb-4">
+        Create an Account
+      </h1>
 
       <Form
-        className="flex w-96 mx-auto flex-col gap-4"
+        className="flex w-full flex-col gap-4"
         onSubmit={handleSubmit(onSubmit)}
       >
+       
         <TextField isRequired>
           <Label>Name</Label>
           <Input
@@ -59,10 +76,11 @@ if(res){
           <FieldError>{errors.name?.message}</FieldError>
         </TextField>
 
+       
         <TextField isRequired>
-          <Label>Image URL</Label>
+          <Label>Photo URL</Label>
           <Input
-            placeholder="Image URL"
+            placeholder="https://..."
             {...register("image", { required: "Image URL is required" })}
           />
           <FieldError>{errors.image?.message}</FieldError>
@@ -78,7 +96,7 @@ if(res){
               pattern: {
                 value:
                   /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Please enter a valid email",
+                message: "Invalid email",
               },
             })}
           />
@@ -99,7 +117,7 @@ if(res){
               validate: {
                 hasUppercase: (value) =>
                   /[A-Z]/.test(value) ||
-                  "Must contain uppercase letter",
+                  "Must contain uppercase",
                 hasNumber: (value) =>
                   /[0-9]/.test(value) ||
                   "Must contain number",
@@ -112,16 +130,30 @@ if(res){
           <FieldError>{errors.password?.message}</FieldError>
         </TextField>
 
-        <div className="flex gap-2">
-          <Button type="submit">
-            <Check />
-            Submit
-          </Button>
-          <Button type="reset" variant="secondary">
-            Reset
-          </Button>
-        </div>
+        <Button type="submit" className="w-full">
+          <Check /> Register
+        </Button>
       </Form>
+
+    
+      <div className="divider my-4">OR</div>
+
+  
+      <Button
+        onClick={handleGoogleLogin}
+        variant="bordered"
+        className="w-full"
+      >
+        Continue with Google
+      </Button>
+
+  
+      <p className="text-center text-sm mt-4">
+        Already have an account?{" "}
+        <Link href="/signin" className="text-primary font-medium">
+          Login
+        </Link>
+      </p>
     </Card>
   );
 }
