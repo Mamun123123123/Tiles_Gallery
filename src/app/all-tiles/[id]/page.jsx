@@ -16,6 +16,7 @@ const SigleTileDetailsPage = async({params}) => {
       
         <div className="relative w-full h-[250px] sm:h-[300px] md:h-[400px] overflow-hidden rounded-xl">
           <Image
+          
             src={data.image}
             alt={data.title}
             fill
