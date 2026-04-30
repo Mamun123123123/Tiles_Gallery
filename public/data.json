@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tile_001",
+    "title": "Ceramic Blue Tile",
+    "description": "Premium ceramic tile with blue glaze finish",
+    "image": "/tile_001.jpg",
+    "category": "ceramic",
+    "price": 45.99,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_002",
+    "title": "Marble White Elegance",
+    "description": "Luxury white marble tile with smooth finish",
+    "image": "/tile_002.jpg",
+    "category": "marble",
+    "price": 79.5,
+    "currency": "USD",
+    "dimensions": "80x80 cm",
+    "material": "Marble",
+    "inStock": true
+  },
+  {
+    "id": "tile_003",
+    "title": "Wood Texture Rustic Tile",
+    "description": "Natural wood look ceramic tile for rustic design",
+    "image": "/tile_003.jpg",
+    "category": "wood",
+    "price": 52.0,
+    "currency": "USD",
+    "dimensions": "60x120 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_004",
+    "title": "Geometric Black Pattern",
+    "description": "Modern geometric black and white pattern tile",
+    "image": "/tile_004.jpg",
+    "category": "modern",
+    "price": 60.25,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_005",
+    "title": "Ocean Wave Mosaic",
+    "description": "Blue mosaic tile inspired by ocean waves",
+    "image": "/tile_005.jpg",
+    "category": "mosaic",
+    "price": 88.99,
+    "currency": "USD",
+    "dimensions": "30x30 cm",
+    "material": "Glass",
+    "inStock": false
+  },
+  {
+    "id": "tile_006",
+    "title": "Golden Luxury Tile",
+    "description": "Premium golden accent tile for luxury interiors",
+    "image": "/tile_006.jpg",
+    "category": "luxury",
+    "price": 120.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Porcelain",
+    "inStock": true
+  },
+  {
+    "id": "tile_007",
+    "title": "Minimal Grey Stone Tile",
+    "description": "Simple and elegant grey stone finish tile",
+    "image": "/tile_007.jpg",
+    "category": "stone",
+    "price": 40.75,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Stone",
+    "inStock": true
+  },
+  {
+    "id": "tile_008",
+    "title": "Floral Art Ceramic Tile",
+    "description": "Decorative floral pattern ceramic tile design",
+    "image": "/tile_008.jpg",
+    "category": "decorative",
+    "price": 55.99,
+    "currency": "USD",
+    "dimensions": "50x50 cm",
+    "material": "Ceramic",
+    "inStock": true
+  },
+  {
+    "id": "tile_009",
+    "title": "Industrial Concrete Tile",
+    "description": "Raw industrial concrete style modern tile",
+    "image": "/tile_009.jpg",
+    "category": "industrial",
+    "price": 48.5,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Concrete",
+    "inStock": true
+  },
+  {
+    "id": "tile_010",
+    "title": "Sunset Gradient Tile",
+    "description": "Colorful gradient tile inspired by sunset view",
+    "image": "/tile_0010.jpg",
+    "category": "artistic",
+    "price": 70.0,
+    "currency": "USD",
+    "dimensions": "60x60 cm",
+    "material": "Ceramic",
+    "inStock": true
+  }
+]
