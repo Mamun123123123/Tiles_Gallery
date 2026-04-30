@@ -3,7 +3,7 @@ import React from 'react'
 
 const SigleTileDetailsPage = async({params}) => {
     const {id} = await params
-    const res = await fetch("https://tiles-gallery-seven.vercel.app/data.json")
+    const res = await fetch("https://tiles-gallery-hda2.vercel.app/data.json")
     const datas = await res.json()
     
     const data = datas.find(item => item.id == id)
