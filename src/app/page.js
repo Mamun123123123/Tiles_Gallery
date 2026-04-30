@@ -1,5 +1,6 @@
 import Banner from "@/components/Banner";
 import Marquee from "@/components/Marquee";
+import TopGeneration from "@/components/TopGeneration";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <div >
      <Banner/>
      <Marquee />
+     <TopGeneration />
     </div>
   );
 }
