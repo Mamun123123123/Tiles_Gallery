@@ -28,7 +28,10 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Navbar />
-        {children}
+        <main className="bg-slate-200">
+          {children}
+        </main>
+        
         <Footer />
         <ToastContainer position="top-right" autoClose={2000} />
         </body>

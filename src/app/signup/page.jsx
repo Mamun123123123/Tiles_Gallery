@@ -16,6 +16,7 @@ import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import Link from "next/link";
 import { toast } from "react-toastify";
+import { GrGoogle } from "react-icons/gr";
 
 export default function SignUpPage() {
   const router = useRouter();
@@ -91,7 +92,7 @@ export default function SignUpPage() {
             <Label>Email</Label>
             <Input
               type="email"
-              placeholder="john@example.com"
+              placeholder="Enter Your Email"
               {...register("email", {
                 required: "Email is required",
                 pattern: {
@@ -144,8 +145,9 @@ export default function SignUpPage() {
         <Button
           onClick={handleGoogleLogin}
           variant="bordered"
-          className="w-full"
+          className="w-full border hover:bg-sky-500"
         >
+          <GrGoogle />
           Continue with Google
         </Button>
 

@@ -71,7 +71,7 @@ export default function LoginPage() {
             <Label>Email</Label>
             <Input
               type="email"
-              placeholder="john@example.com"
+              placeholder="Enter Your Email"
               {...register("email", {
                 required: "Email is required",
               })}
@@ -121,7 +121,7 @@ export default function LoginPage() {
         <Button
           onClick={handleGoogleLogin}
           variant="bordered"
-          className="w-full flex items-center justify-center gap-2"
+          className="w-full border hover:bg-sky-700 hover:text-white flex items-center justify-center gap-2"
         >
           <GrGoogle />
           Continue with Google

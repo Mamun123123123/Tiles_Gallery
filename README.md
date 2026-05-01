@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🧱 Tiles Gallery
 
-## Getting Started
+## 📌 Project Name
 
-First, run the development server:
+**Tiles Gallery**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎯 Purpose
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Tiles Gallery is a modern web application where users can explore a collection of aesthetic tiles. The platform allows users to browse, search, and view detailed information about tiles. It also includes authentication and user profile management features.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## ✨ Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* 🔍 Search tiles by title
+* 🧱 Browse all tiles in a clean gallery layout
+* ⭐ Featured tiles section on homepage
+* 📄 Detailed tile information page
+* 🔐 User authentication (Login & Registration)
+* 🔑 Google social login
+* 👤 User profile page
+* ✏️ Update user name and profile image
+* 📱 Fully responsive design (Mobile, Tablet, Desktop)
+* ⚡ Fast performance using Next.js App Router
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 📦 NPM Packages Used
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🔧 Core Dependencies
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* next
+* react
+* react-dom
+
+### 🎨 UI & Styling
+
+* tailwindcss
+* @heroui/react
+* @heroui/styles
+* @gravity-ui/icons
+* react-icons
+
+### 🔐 Authentication & Database
+
+* better-auth
+* @better-auth/mongo-adapter
+* mongodb
+
+### 📋 Form Handling & UX
+
+* react-hook-form
+* react-toastify
+
+### 🎞️ Animation / Slider
+
+* swiper
+
+---
+
+## 🛠️ Dev Dependencies
+
+* eslint
+* eslint-config-next
+* @tailwindcss/postcss
+* babel-plugin-react-compiler
+
+---
+
+⭐ This project demonstrates modern full-stack development using Next.js, authentication with BetterAuth, MongoDB integration, and responsive UI design.

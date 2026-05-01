@@ -17,23 +17,14 @@ const Navbar = () => {
   };
 
   return (
-    <div className="border-b px-2">
-      <nav className="max-w-7xl mx-auto w-full flex items-center justify-between py-3">
-
+    <div className="sticky top-0 z-50 border-b px-2 bg-slate-300/90 backdrop-blur-md shadow-lg">
+      <nav className="max-w-7xl mx-auto w-full flex items-center justify-between py-5">
         <div className="flex items-center gap-2">
-          <Image
-            src={"/logo.png"}
-            alt="logo"
-            width={30}
-            height={30}
-          />
+          <Image src={"/logo.png"} alt="logo" width={30} height={30} />
           <h3 className="font-black text-lg">Tiles Gallery</h3>
         </div>
 
-        <button
-          className="sm:hidden text-2xl"
-          onClick={() => setOpen(!open)}
-        >
+        <button className="sm:hidden text-2xl" onClick={() => setOpen(!open)}>
           ☰
         </button>
 
@@ -45,7 +36,10 @@ const Navbar = () => {
 
         <div className="hidden sm:flex items-center gap-3">
           {!user && (
-            <Link href={"/signin"} className="text-sm bg-slate-500 text-white font-bold p-2 border rounded-2xl ">
+            <Link
+              href={"/signin"}
+              className="text-sm bg-slate-500 text-white font-bold px-3 py-1 rounded-2xl"
+            >
               Login
             </Link>
           )}
@@ -73,6 +67,7 @@ const Navbar = () => {
         <div className="sm:hidden flex flex-col gap-3 px-4 pb-4 text-sm">
           <Link onClick={() => setOpen(false)} href={"/"}>Home</Link>
           <Link onClick={() => setOpen(false)} href={"/all-tiles"}>All Tiles</Link>
+
           {user && (
             <Link onClick={() => setOpen(false)} href={"/profile"}>
               Profile
