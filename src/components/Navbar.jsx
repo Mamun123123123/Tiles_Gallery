@@ -40,7 +40,7 @@ const Navbar = () => {
         <div className="hidden sm:flex items-center gap-6 text-sm">
           <Link href={"/"}>Home</Link>
           <Link href={"/all-tiles"}>All Tiles</Link>
-          {user && <Link href={"/profile"}>Profile</Link>}
+          <Link href={"/profile"}>Profile</Link>
         </div>
 
         <div className="hidden sm:flex items-center gap-3">

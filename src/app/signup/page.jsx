@@ -43,6 +43,7 @@ export default function SignUpPage() {
     }
 
     if (res) {
+      await authClient.signOut();
       toast.success("Registration Successful");
       router.push("/signin");
     }
