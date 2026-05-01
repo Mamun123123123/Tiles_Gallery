@@ -43,7 +43,10 @@ export default function LoginPage() {
 
     if (res) {
       toast.success("Login Successful");
-      router.push("/");
+
+      setTimeout(() => {
+        router.push("/");
+      }, 400);
     }
   };
 
@@ -88,11 +91,9 @@ export default function LoginPage() {
                 required: "Password is required",
               })}
             />
-
             <Description className="text-xs sm:text-sm">
               Enter your account password
             </Description>
-
             <FieldError>{errors.password?.message}</FieldError>
           </TextField>
 
@@ -103,10 +104,7 @@ export default function LoginPage() {
 
           <p className="text-xs sm:text-sm text-gray-500 text-center">
             Don't have an account?{" "}
-            <Link
-              href="/signup"
-              className="text-primary font-medium hover:underline"
-            >
+            <Link href="/signup" className="text-primary font-medium hover:underline">
               Register
             </Link>
           </p>
